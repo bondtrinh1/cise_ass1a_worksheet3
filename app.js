@@ -14,7 +14,6 @@ app.use(express.static('build'));
 const path = require("path");
 
 app.use(express.static(path.resolve(__dirname, "./cise_ass1a_worksheet3_frontend/build")));
-
 app.get("*", function (request, response) 
 {
   response.sendFile(path.resolve(__dirname, "./cise_ass1a_worksheet3_frontend/build", "index.html"));
