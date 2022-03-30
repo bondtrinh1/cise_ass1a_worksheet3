@@ -7,7 +7,9 @@
     "start": "node app.js",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd cise_ass1a_worksheet3_frontend && npm install --only=dev && npm install && npm run build"
+    "build": "cd cise_ass1a_worksheet3_frontend && npm run build",
+    "install-client": "cd cise_ass1a_worksheet3_frontend && npm install",
+    "heroku-postbuild": "npm run install-cise_ass1a_worksheet3_frontend && npm run build"
   },
   "repository": {
     "type": "git",
