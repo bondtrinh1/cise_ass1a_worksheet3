@@ -14,13 +14,11 @@ app.use(express.static("build"));
 
 const path = require("path");
 
-if (process.env.NODE_ENV === "production") {
-
 app.use(express.static(path.resolve(__dirname, "./cise_ass1a_worksheet3_frontend/build")));
 app.get("*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./cise_ass1a_worksheet3_frontend/build", "index.html"));
 });
-}
+
 const port = process.env.PORT || 8082;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
